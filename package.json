@@ -1,0 +1,22 @@
+{
+  "name": "node_crud",
+  "version": "1.0.0",
+  "description": "crud with vanilla JS and node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nomankey/node_crud.git"
+  },
+  "author": "Nomankey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nomankey/node_crud/issues"
+  },
+  "homepage": "https://github.com/Nomankey/node_crud#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
