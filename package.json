@@ -1,0 +1,29 @@
+{
+  "name": "node_crud",
+  "version": "1.0.0",
+  "description": "crud with vanilla JS and node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js --delay 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nomankey/node_crud.git"
+  },
+  "author": "Nomankey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nomankey/node_crud/issues"
+  },
+  "homepage": "https://github.com/Nomankey/node_crud#readme",
+  "dependencies": {
+    "@babel/node": "^7.13.13",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "nodemon": "^2.0.7"
+  }
+}
