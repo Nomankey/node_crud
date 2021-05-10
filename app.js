@@ -3,10 +3,11 @@ import morgan from "morgan";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import { localsMiddleware } from "./middlewares";
+import routes from "./routes";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
-import routes from "./routes"
 // import { nextTick } from "process";
 // import { useSimple } from "core-js/fn/symbol";
 
@@ -22,16 +23,17 @@ const app = express(); // making an application through a variable by executing 
 //     res.send('not happening')
 // };
 
-app.use(morgan("dev"));
 app.use(helmet());
+app.set('view engine', "pug");
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cookieParser());
+app.use(morgan("dev"));
+app.use(localsMiddleware)
 
 // app.use(betweenHome);
 
 
-app.set('view engine', "pug");
 app.use("/", globalRouter);
 app.use(routes.users, userRouter); //use means, user want to use the whole router
 app.use(routes.videos, videoRouter);
