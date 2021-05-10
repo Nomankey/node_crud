@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
+import routes from "./routes"
 // import { nextTick } from "process";
 // import { useSimple } from "core-js/fn/symbol";
 
@@ -29,9 +30,12 @@ app.use(cookieParser());
 
 // app.use(betweenHome);
 
+
+app.set('view engine', "pug");
 app.use("/", globalRouter);
-app.use("/user", userRouter); //use means, user want to use the whole router
-app.use("video/", videoRouter);
+app.use(routes.users, userRouter); //use means, user want to use the whole router
+app.use(routes.videos, videoRouter);
+app.use(routes.videos,videoRouter);
 
 
 export default app;// when somebdoy imports my app, im gonna give my app object
