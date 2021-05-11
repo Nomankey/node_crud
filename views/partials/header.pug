@@ -1,6 +1,10 @@
 header.header
     .header__column
-        i.fas.fa-play-circle
+        a(href=routes.home)
+            i.fas.fa-play-circle
+    .header__column
+        form(action=routes.search, method="get")
+            input(type="text", placeholder="Search by term" name="term")
     .header__column
         ul 
             li
