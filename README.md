@@ -84,13 +84,13 @@ it allows you to organize your controllers and  URLs.</br>
 In this project it has two huge branch of routers. => 1. USERS 2. VIDEOS</br>
 
 ##### routers used in this project
-/ -> home</br>
-/join -> Join</br>
-/login -> Login</br>
-/search -> Search</br>
-
+/ -> Home</br></br>
+/users/join -> Join</br>
+/users/login -> Login</br>
 /users/edit-> Edit Profile</br>
 /users/delete -> Delete Profile</br></br>
+
+/videos/search -> Search Video</br>
 /videos/watch -> Watch Video</br>
 /videos/edit -> Edit Video</br>
 /videos/delete -> Delete Video </br>
