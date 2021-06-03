@@ -4,11 +4,18 @@ import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 
+
 const PORT = 8888;
+
+console.log(process.cwd());//current working directory
 
 const app = express();
 const logger = morgan("dev");
+
 app.use(logger);
+app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views")
+// app.set("views","./src/views");
 
 app.use("/", globalRouter);
 app.use("/users", userRouter);
