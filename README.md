@@ -84,23 +84,68 @@ it allows you to organize your controllers and  URLs.</br>
 In this project it has two huge branch of routers. => 1. USERS 2. VIDEOS</br>
 
 ##### routers used in this project
-/ -> Home</br></br>
-/users/join -> Join</br>
-/users/login -> Login</br>
-/users/edit-> Edit Profile</br>
+/ -> Home</br>
+/join -> Join</br>
+/login -> Login</br>
+/search -> Search</br>
+
+/users/:id-> See User</br>
+/users/logout -> Log Out</br>
+/users/edit -> Edit My Profile</br>
 /users/delete -> Delete Profile</br></br>
 
-/videos/search -> Search Video</br>
-/videos/watch -> Watch Video</br>
-/videos/edit -> Edit Video</br>
-/videos/delete -> Delete Video </br>
-/videos/comments -> Comment on a video </br>
-/videos/comments/delete -> Delete a comment of a video </br>
+/videos/:id -> See Video</br>
+/videos/:id/edit -> Edit Video</br>
+/videos/:id/delete -> Delete Video </br>
+/videos/upload -> Upload Video</br>
+
+
+#### export, import
+* import express from "express"
+    * importing export default
+* import { edit } from "../controllers/userControllers"
+    * importing export
+
+#### Parameter
+https://expressjs.com/en/guide/routing.html
+```
+videoRouter.get("/:id", see); video/12 videoRouter.get("/:id/edit", edit); video/12/edit
+```
+it's important to put ":", and this allows URLs to have variables inside.
 
 
 #### HTTP method
 * get
 * send
+
+#### View Engine
+the view engine i used in this project is pug
+to render the pug file in views folder
+```
+export const trending = (req, res) => res.render("home");
+```
+setting directory to find view files 
+```
+app.set("views", process.cwd() + "/src/views")
+```
+like the code below it is possible to put javascript code in pug
+```
+doctype html
+html(lang="en")
+    head
+        title AlpacaTube
+    body
+        h1 watch video
+        footer &copy; #{new Date().getFullYear()} AlpacaTube
+```
+* partials: helps to prevent unneccessary overlap of codes
+* extend: using base file
+* block: in a template i like a window/ it's a place i can put things inside of
+* mixin: it's a partial that receives data
+    * use mixins when it doesn't have the same shape but not same data. so mixin is like a smart partial
+
+#### How to post data on Backend
+
 
 
 
