@@ -141,6 +141,10 @@ html(lang="en")
 * partials: helps to prevent unneccessary overlap of codes
 * extend: using base file
 * block: in a template i like a window/ it's a place i can put things inside of
+* mixin: it's a partial that receives data
+    * use mixins when it doesn't have the same shape but not same data. so mixin is like a smart partial
+
+#### How to post data on Backend
 
 
 

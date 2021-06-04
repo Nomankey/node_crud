@@ -1,7 +1,10 @@
-extends base.pug
-
-block head
-    title Home | AlpacaTube
+extends base
+include mixins/video
 
 block content
-    h1 Home
+    h2 Videos Trending
+    ul
+        each information in videos
+           +video(information)
+        else
+            li Sorry Nothing Found.
