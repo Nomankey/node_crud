@@ -145,6 +145,21 @@ html(lang="en")
     * use mixins when it doesn't have the same shape but not same data. so mixin is like a smart partial
 
 #### How to post data on Backend
+```
+form(method="POST")
+```
+* method is how we want to transmit information between the form and Backend
+    * if the method is "GET" , the information goes to URL
+
+    * if you wnat add, delete or edit the answer is "POST"
+
+* So what is the data going to do in my backend?
+* When you use a form all the data are recieved at req.data
+* GET VS POST
+    * GET: retrieves a representation of the specified resource and include all required data in the URL.
+        * it should not be used for operations that cause side-effects like taking actions in web applications. 
+    * POST: writes data, submits data to be processed(from an HTML form) to the identified resource.
+        * This results in the creation of a new resource or the updates of existing resources or both
 
 
 
