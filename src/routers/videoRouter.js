@@ -1,10 +1,10 @@
 import express from "express";
-import { watch, getEdit, postEdit, upload, deleteVideo } from "../controllers/videoController";
+import { watch, getEdit, getUpload, postEdit, postUpload } from "../controllers/videoController";
 
 const videoRouter = express.Router();
 
 videoRouter.get("/:id(\\d+)", watch); //by using regex it can only allow digits from now on
-videoRouter.get("/:id(\\d+)/edit", getEdit); // renders form on edit page
-videoRouter.post("/:id(\\d+)/edit", postEdit) // post edit
+videoRouter.route("/:id(\\d+)/edit").get(getEdit).post(postEdit);
+videoRouter.route("/upload").get(getUpload).post(postUpload);
 
 export default videoRouter;
