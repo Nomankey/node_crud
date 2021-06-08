@@ -161,7 +161,34 @@ form(method="POST")
     * POST: writes data, submits data to be processed(from an HTML form) to the identified resource.
         * This results in the creation of a new resource or the updates of existing resources or both
 
+#### MONGO DB
+* it is a document based data base
+    * on mongodb, what i save are saved as json like database like how things saved in package.json
 
+* to run MongoDB Commuinity Edition
+```
+brew services start mongodb-community@4.4
+
+```
+* to stop MongoDB Community Eidtion
+```
+brew services stop mongodb-community@4.4
+
+```
+
+* To Verify MongoDB is running
+```
+brew services list
+
+```
+
+* Connect and Use MONGO DB
+```
+mongo
+
+```
+#### Mongoose
+it's a package that allows the user to talk with MONGO DB with JavaScript
 
 
 
