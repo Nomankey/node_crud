@@ -189,6 +189,7 @@ mongo
 ```
 #### Mongoose
 it's a package that allows the user to talk with MONGO DB with JavaScript
+* a mongoose schema defines the structure of the document, default values, validators etc., where a **Mongoose model** provides an interface to the database for creating, querying, updating, deleting, routing, etc.
 
 
 
