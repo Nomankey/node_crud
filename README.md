@@ -191,5 +191,13 @@ mongo
 it's a package that allows the user to talk with MONGO DB with JavaScript
 * a mongoose schema defines the structure of the document, default values, validators etc., where a **Mongoose model** provides an interface to the database for creating, querying, updating, deleting, routing, etc.
 
+**model vs schema**
+* A mongoose model is a wrapper on the mongoose schema
+* mongoose *schema* defines the structure of the documents, default values, validators etc
+* mongoose *model* provides an interface to the database for reating, querying, updating, deleting records, etc
+
+**Query**
+* a database query is a similar action that is most closely associated with some sort of CRUD fucntion
+
 
 
