@@ -204,5 +204,13 @@ password must be hashed by ons-sided function for security which is called deter
 * install bcrypt
     * it's a library to help you hash passwords
 
+#### Cookie & Session
+* Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example name, age, or identification number etc. The browser stores this information on a local machine for future use.
+    * When next time browser sends any request to web server then it sends those cookies information to the server and server uses that information to identify the user.
+* A session creates a file in a temporary directory on the server where registered session variables and their values are stored. This data will be available to all pages on the site during that visit.
+    * A session ends when the user closes the browser or after leaving the site, the server will terminate the session after a predetermined period of time, commonly 30 minutes duration.
+
+
+
 
 
