@@ -199,5 +199,10 @@ it's a package that allows the user to talk with MONGO DB with JavaScript
 **Query**
 * a database query is a similar action that is most closely associated with some sort of CRUD fucntion
 
+#### password
+password must be hashed by ons-sided function for security which is called determistic function
+* install bcrypt
+    * it's a library to help you hash passwords
+
 
 
