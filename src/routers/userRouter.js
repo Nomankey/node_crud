@@ -1,16 +1,20 @@
 import express from "express";
 import {
-  watch,
-  getUpload,
-  getEdit,
-  postEdit,
-  postUpload,
-} from "../controllers/videoController";
+  edit,
+  remove,
+  logout,
+  see,
+  startGithubLogin,
+  finishGithubLogin,
+} from "../controllers/userController";
 
-const videoRouter = express.Router();
+const userRouter = express.Router();
 
-videoRouter.get("/:id([0-9a-f]{24})", watch);
-videoRouter.route("/:id([0-9a-f]{24})/edit").get(getEdit).post(postEdit);
-videoRouter.route("/upload").get(getUpload).post(postUpload);
+userRouter.get("/logout", logout);
+userRouter.get("/edit", edit);
+userRouter.get("/remove", remove);
+userRouter.get("/github/start", startGithubLogin);
+userRouter.get("/github/finish", finishGithubLogin);
+userRouter.get(":id", see);
 
-export default videoRouter;
+export default userRouter;
