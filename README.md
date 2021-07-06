@@ -149,7 +149,7 @@ html(lang="en")
 form(method="POST")
 ```
 * method is how we want to transmit information between the form and Backend
-    * if the method is "GET" , the information goes to URL
+    * if the method is "GET" , the information always goes to URL
 
     * if you wnat add, delete or edit the answer is "POST"
 
