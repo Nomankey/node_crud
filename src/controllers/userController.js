@@ -190,4 +190,4 @@ export const postChangePassword = async (req, res) => {
     return res.redirect("/users/logout");
 };
 
-export const see = (req, res) => res.send("See User");
+export const see = (req, res) => res.send("See User");;
