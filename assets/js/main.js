@@ -1,0 +1,1 @@
+(async()=>{alert("Hi! It's working"),await fetch("")})();
