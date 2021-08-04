@@ -8,7 +8,7 @@ export const watch = async (req, res) => {
   const { id } = req.params;
   const video = await Video.findById(id).populate("owner");
   if (!video) {
-    return res.render("404", { pageTitle: "Video not found." });
+    return res.render("404", { pageTitle: "Video is not here!!!." });
   }
   return res.render("watch", { pageTitle: video.title, video });
 };
@@ -85,7 +85,7 @@ export const deleteVideo = async (req, res) => {
   } = req.session;
   const video = await Video.findById(id);
   if (!video) {
-    return res.status(404).render("404", { pageTitle: "Video not found." });
+    return res.status(404).render("404", { pageTitle: "Video not found. Please try again" });
   }
   if (String(video.owner) !== String(_id)) {
     return res.status(403).redirect("/");
